@@ -11,7 +11,7 @@ pipeline{
         stage(ContinousDeployment){
             steps{
                 echo "Deploying TheCode"
-                sh 'sudo scp /var/lib/jenkins/workspace/Project1/* ubuntu@54.90.255.148:/var/www/html/'
+                sh 'scp /var/lib/jenkins/workspace/Project1/* ubuntu@54.90.255.148:/var/www/html/'
                 echo "Deployment Completed"
             }
         }
